@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import { Link } from 'react-router-dom'
+
 const SearchBar = () => {
 
     const [searchValue, setSearchValue] = useState("")
@@ -21,6 +23,8 @@ const SearchBar = () => {
             value={searchValue}
             onChange={onSearchValueChange}
         />
+
+        <button> <Link to={"/profile"}>Buscar</Link></button>
 
     </div>
   )
