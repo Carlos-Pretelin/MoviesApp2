@@ -14,6 +14,8 @@ const Header = () => {
       <Link to={"/profile"}>Profile</Link>
 
       <SearchBar/>
+
+      <button> <Link to={"/profile"}>Buscar</Link></button>
       
     </div>
   )
