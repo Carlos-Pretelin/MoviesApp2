@@ -6,6 +6,12 @@ import SearchBar from './SearchBar'
 
 
 const Header = () => {
+
+//   const handleClick = ()=> {
+//     let filteredMedia = movies.filter( movie.name === searchValue)
+// }
+
+
   return (
     <div>
       <h1>Header</h1>
