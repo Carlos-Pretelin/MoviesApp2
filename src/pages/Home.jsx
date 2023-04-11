@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Slider from '../components/Slider'
-import initialState from '../initialState'
+import useData from '../hooks/useData'
 
 
 
 const Home = () => {
 
-    //const {movies} = initialState
-    const [movieList, setMovieList] = useState(initialState.movies)
+    const {movieList, setMovieList} = useData();
+    
 
   return (
     <div>

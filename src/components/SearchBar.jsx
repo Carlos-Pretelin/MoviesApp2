@@ -1,24 +1,16 @@
 import React, { useState } from 'react'
-import useSearchValue from '../hooks/useSearchValue'
+import useData from '../hooks/useData';
 
 
 const SearchBar = () => {
 
-    // const [searchValue, setSearchValue] = useState("")
-
-
-    // const onSearchValueChange = (e)=> {
-    //     setSearchValue(e.target.value)
-    //     console.log(searchValue)
-
-        
-    // }
+  
 
     const {
         searchValue, 
         setSearchValue, 
         onSearchValueChange, 
-        handleClick} = useSearchValue();
+        handleClick} = useData();
     
 
     
