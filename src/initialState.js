@@ -22,7 +22,7 @@ const initialState = {
 
     ],
     
-    shows: [],
+    // shows: [],
 }
 
 

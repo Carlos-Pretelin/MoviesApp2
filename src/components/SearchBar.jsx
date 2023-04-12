@@ -10,9 +10,9 @@ const SearchBar = () => {
         searchValue, 
         setSearchValue, 
         onSearchValueChange, 
-        handleClick} = useData();
+        } = useData();
     
-
+        
     
 
   return (

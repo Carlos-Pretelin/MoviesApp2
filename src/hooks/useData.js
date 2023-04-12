@@ -1,18 +1,41 @@
 import React, {useState} from 'react'
 import initialState from '../initialState'
-import useSearchValue from './useSearchValue'
 
 
 
 
 const useData = () => {
 
+    //movies with the initial state
 const [movieList, setMovieList] = useState(initialState.movies)
+    //The value of the input
+const [searchValue, setSearchValue] = useState("")
 
-const {searchValue, 
-    setSearchValue,
-    onSearchValueChange,
-    handleClick,} = useSearchValue();
+//function that updates the value of the input 
+const onSearchValueChange = (e)=> {
+    setSearchValue(e.target.value)
+    console.log(e.target.value)
+
+    
+}
+
+let searchedMedia = [];
+
+if(!searchValue.length >= 1){
+    searchedMedia = movieList;
+
+} else {
+
+    searchedMedia = movieList.filter( movie => {
+        const movieName = movie.name.toLowerCase();
+        const searchText = searchValue.toLowerCase();
+        
+
+       return movieName.includes(searchText)
+    })
+}
+
+
 
   return {
     movieList,
@@ -20,7 +43,8 @@ const {searchValue,
     searchValue, 
     setSearchValue,
     onSearchValueChange,
-    handleClick,
+    searchedMedia,
+    
   }
 }
 

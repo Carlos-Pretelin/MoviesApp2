@@ -1,15 +1,18 @@
 import React from 'react'
+import useData from '../hooks/useData'
 
 import "../styles/Slider.scss"
 
-const Slider = ({media}) => {
+const Slider = () => {
 
+
+  const {searchedMedia} = useData();
 
 
   return (
     <div className='Slider'>
 
-        {media.map( item => (
+        {searchedMedia.map( item => (
           <div key={item.name}>
                 <h1>{item.name}</h1>
                 <h2>{item.description}</h2>

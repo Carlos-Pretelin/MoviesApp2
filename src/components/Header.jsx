@@ -7,9 +7,6 @@ import SearchBar from './SearchBar'
 
 const Header = () => {
 
-//   const handleClick = ()=> {
-//     let filteredMedia = movies.filter( movie.name === searchValue)
-// }
 
 
   return (
@@ -21,7 +18,7 @@ const Header = () => {
 
       <SearchBar/>
 
-      <button> <Link to={"/profile"}>Buscar</Link></button>
+      <button>Buscar</button>
       
     </div>
   )
